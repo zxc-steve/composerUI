@@ -3,6 +3,7 @@ package com.example.composerui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -23,9 +24,14 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Greeting("Android")
-                    //MakingWaves2(AudioUi(true,false,PlayingSource.Buffer))
-                    MakingWaves2(AudioUi(false,true,PlayingSource.Buffer))
-                    // main branch modification
+                    Column() {
+
+
+                        //MakingWaves2(AudioUi(true,false,PlayingSource.Buffer))
+                        MakingWaves2(AudioUi(false, true, PlayingSource.Buffer))
+                        //  branch modification
+                        MakingWaves2(AudioUi(true, true, PlayingSource.Buffer))
+                    }
                 }
             }
         }
