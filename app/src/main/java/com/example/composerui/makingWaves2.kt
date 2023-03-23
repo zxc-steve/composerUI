@@ -26,12 +26,15 @@ fun MakingWaves2(audioUi:AudioUi){
             Text(text = "Hold to play",modifier = Modifier.weight(1f, fill = true))
             Checkbox(checked = isPlaying, onCheckedChange = {})
         }
-        Text(
-            text = when (playingSource) {
-                PlayingSource.Microphone -> "Microphone"
-                PlayingSource.Buffer -> "Buffer"
-                PlayingSource.Generator -> "Generator"
-            }
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(text = "Playing Source",modifier = Modifier.weight(1f, fill = true))
+            Text(
+                text = when (playingSource) {
+                    PlayingSource.Microphone -> "Microphone"
+                    PlayingSource.Buffer -> "Buffer"
+                    PlayingSource.Generator -> "Generator"
+                }
+            )
+        }
     }
 }
