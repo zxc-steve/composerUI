@@ -23,7 +23,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Greeting("Android")
-                    MakingWaves2(AudioUi(true,false,PlayingSource.Buffer))
+                    //MakingWaves2(AudioUi(true,false,PlayingSource.Buffer))
+                    MakingWaves2(AudioUi(false,true,PlayingSource.Buffer))
+                    // main branch modification
                 }
             }
         }
