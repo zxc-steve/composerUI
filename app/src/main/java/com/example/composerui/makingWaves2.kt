@@ -27,7 +27,7 @@ fun MakingWaves2(audioUi:AudioUi){
             Checkbox(checked = isPlaying, onCheckedChange = {})
         }
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(text = "Playing Source",modifier = Modifier.weight(1f, fill = true))
+            Text(text = "Playing Source, new in Master",modifier = Modifier.weight(1f, fill = true))
             Text(
                 text = when (playingSource) {
                     PlayingSource.Microphone -> "Microphone"
